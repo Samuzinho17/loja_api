@@ -7,3 +7,4 @@ urlpatterns = [
     path('clientes/', include('clientes.urls')),#<- Aqui conectamos o app
     path('pedidos/', include('pedidos.urls')),
 ]
+
