@@ -1,10 +1,10 @@
+from django.shortcuts import render
+from .models import Produtos
 
-from django.http import HttpResponse
+
 
 def lista_produtos(request):
-    return HttpResponse("""Lista de Produtos:<br>
-    Banana<br>
-    Milho<br>
-    Morango<br>
-    Uva<br>
-    Jabuticaba""")
+    produtos = Produtos.objects.all()
+
+
+    return render(request,'produtos/lista_produtos.html', {'produtos': produtos})
